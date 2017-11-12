@@ -21,6 +21,10 @@ public class QuestionPanel extends ResponsePanel {
 		this.add(getSelectionOptions(), BorderLayout.SOUTH);
 	}
 
+	/**
+	 * created the JPanel with the radio buttons and returned to be added to the mainPanel
+	 * @return
+	 */
 	public JPanel getSelectionOptions() {
 		JPanel selection = new JPanel();
 		selection.setLayout(new FlowLayout());

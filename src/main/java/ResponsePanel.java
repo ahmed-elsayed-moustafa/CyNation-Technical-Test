@@ -12,6 +12,7 @@ public class ResponsePanel extends JPanel {
 	private volatile boolean flag = false;
 	private String selection = "";
 
+	//added the components 
 	ResponsePanel(String question) {
 		this.question = question;
 		this.setLayout(new BorderLayout());
@@ -19,6 +20,7 @@ public class ResponsePanel extends JPanel {
 		this.add(new JLabel(" " + question, SwingUtilities.CENTER), BorderLayout.CENTER);
 	}
 
+	//cynation logo downloaded and resized to fit app
 	public ImageIcon resize() {
 		ImageIcon iconLogo = new ImageIcon(this.getClass().getResource("/logo.jpg"));
 		Image image = iconLogo.getImage(); // transform it

@@ -11,6 +11,7 @@ public class ConnectionClass {
 		c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres");
 	}
 
+	//list of questions
 	public ArrayList<String> selectQuestions() throws SQLException {
 		stmt = c.createStatement();
 		ArrayList<String> list = new ArrayList<String>();
@@ -22,6 +23,7 @@ public class ConnectionClass {
 		return list;
 	}
 
+	//list of responses
 	public ArrayList<String> selectResponses() throws SQLException {
 		stmt = c.createStatement();
 		ArrayList<String> list = new ArrayList<String>();
@@ -33,6 +35,7 @@ public class ConnectionClass {
 		return list;
 	}
 
+	//keeping track of answers for each question
 	public void saveAnswer(String answer, String question) {
 
 		String sql = "UPDATE questions SET";
