@@ -21,7 +21,6 @@ public class App extends JFrame implements Runnable, IApp {
 	private QuestionPanel[] questions;
 	private ResponsePanel[] responses;
 	private MappingPanel mapping;
-	private int index = 0;
 	private ResponsePanel current = null;
 
 	public App(String name) throws ClassNotFoundException, SQLException {
@@ -29,7 +28,7 @@ public class App extends JFrame implements Runnable, IApp {
 		connection = new ConnectionClass();
 		questions = setQuestions();
 		responses = setResponses();
-		current = questions[index];
+		current = questions[0];
 		mapping = new MappingPanel(questions, responses);
 		this.getContentPane().add(current, null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
