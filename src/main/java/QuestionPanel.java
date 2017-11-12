@@ -18,10 +18,10 @@ public class QuestionPanel extends ResponsePanel {
 	
 	QuestionPanel(String question) {
 		super(question);
-		this.add(getAnswer(), BorderLayout.SOUTH);
+		this.add(getSelectionOptions(), BorderLayout.SOUTH);
 	}
 	
-	public JPanel getAnswer() {
+	public JPanel getSelectionOptions() {
 		JPanel selection = new JPanel();
 		selection.setLayout(new FlowLayout());
 		bgroup = new ButtonGroup();
