@@ -45,17 +45,4 @@ public interface IApp {
 	 */
 	public void setPanelAndValidate(ResponsePanel res);
 
-	/**
-	 * Based on selection we need to keep track of the current View
-	 * 
-	 */
-	public void updateIndexBasedOnYes();
-
-	
-	/**
-	 * Based on selection we need to keep track of the current View
-	 * 
-	 */
-	public void updateIndexBasedOnNo();
-
 }

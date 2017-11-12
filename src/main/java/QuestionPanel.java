@@ -15,12 +15,12 @@ public class QuestionPanel extends ResponsePanel {
 	private JButton btn = new JButton("SUBMIT");
 	public static int counter = 0;
 	private ButtonGroup bgroup;
-	
+
 	QuestionPanel(String question) {
 		super(question);
 		this.add(getSelectionOptions(), BorderLayout.SOUTH);
 	}
-	
+
 	public JPanel getSelectionOptions() {
 		JPanel selection = new JPanel();
 		selection.setLayout(new FlowLayout());

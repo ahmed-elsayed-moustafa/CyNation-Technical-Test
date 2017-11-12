@@ -1,6 +1,10 @@
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  * 
@@ -71,43 +75,8 @@ public class App extends JFrame implements Runnable, IApp {
 	}
 
 	public void selectionAlgorithm(String answer) {
-		ResponsePanel panel = mapping.getResponseMap().get(index).get(answer);
-
-		switch (answer) {
-		case "YES":
-			updateIndexBasedOnYes();
-			break;
-		case "NO":
-			updateIndexBasedOnNo();
-			break;
-		}
-		
+		ResponsePanel panel = mapping.getResponseMap().get(current.getQuestion()).get(answer);	
 		setPanelAndValidate(panel);
-	}
-
-	public void updateIndexBasedOnYes() {
-		switch (index) {
-		case 3:
-		case 5:
-		case 4:
-			index = 2;
-			break;
-		default:
-			index += 1;
-			break;
-		}
-
-	}
-
-	public void updateIndexBasedOnNo() {
-		switch (index) {
-		case 0:
-			index = 4;
-			break;
-		case 3:
-			index = 5;
-			break;
-		}
 	}
 
 	public void setPanelAndValidate(ResponsePanel res) {
