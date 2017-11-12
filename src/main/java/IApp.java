@@ -30,7 +30,7 @@ public interface IApp {
 	 * 
 	 * Based on the selection we need to identify the right question to ask next
 	 *
-	 * This is done via Mapping the question to the next based on the answer
+	 * This is done via Mapping the question to the next based Panel based on the answer given
 	 *
 	 * @param answer
 	 */
