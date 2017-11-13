@@ -22,6 +22,7 @@ public class App extends JFrame implements Runnable, IApp {
 	private ResponsePanel[] responses;
 	private MappingPanel mapping;
 	private ResponsePanel current = null;
+	Map<ResponsePanel, String> map= new HashMap<ResponsePanel,String>();
 
 	public App(String name) throws ClassNotFoundException, SQLException {
 		super(name);
@@ -74,7 +75,7 @@ public class App extends JFrame implements Runnable, IApp {
 	}
 
 	public void selectionAlgorithm(String answer) {
-		ResponsePanel panel = mapping.getResponseMap().get(current.getQuestion()).get(answer);	
+		ResponsePanel panel = mapping.getResponseMap().get(current).get(answer);
 		setPanelAndValidate(panel);
 	}
 

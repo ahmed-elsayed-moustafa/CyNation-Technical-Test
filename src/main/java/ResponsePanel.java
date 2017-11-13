@@ -47,4 +47,31 @@ public class ResponsePanel extends JPanel {
 	public void setSelection(String selection) {
 		this.selection = selection;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((question == null) ? 0 : question.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ResponsePanel other = (ResponsePanel) obj;
+		if (question == null) {
+			if (other.question != null)
+				return false;
+		} else if (!question.equals(other.question))
+			return false;
+		return true;
+	}
+	
+	
 }
