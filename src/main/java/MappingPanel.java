@@ -46,17 +46,17 @@ public class MappingPanel {
 	}
 
 	public void fifthQuestion() {
-		HashMap<String, ResponsePanel> fourth = new HashMap<String, ResponsePanel>();
-		fourth.put("YES", questions[2]);
-		fourth.put("NO", responses[0]);
-		responseMap.put(new QuestionPanel("DO YOU SELL IN EU?"), fourth);
+		HashMap<String, ResponsePanel> fifth = new HashMap<String, ResponsePanel>();
+		fifth.put("YES", questions[2]);
+		fifth.put("NO", responses[0]);
+		responseMap.put(new QuestionPanel("DO YOU SELL IN EU?"), fifth);
 	}
 
 	public void sixthQuestion() {
-		HashMap<String, ResponsePanel> fourth = new HashMap<String, ResponsePanel>();
-		fourth.put("YES", responses[1]);
-		fourth.put("NO", responses[0]);
-		responseMap.put(new QuestionPanel("DOES YOUR OUTSOURCE EXIST IN EUROPE?"), fourth);
+		HashMap<String, ResponsePanel> sixth = new HashMap<String, ResponsePanel>();
+		sixth.put("YES", responses[1]);
+		sixth.put("NO", responses[0]);
+		responseMap.put(new QuestionPanel("DOES YOUR OUTSOURCE EXIST IN EUROPE?"), sixth);
 	}
 
 	public HashMap<ResponsePanel, HashMap<String, ResponsePanel>> getResponseMap() {
